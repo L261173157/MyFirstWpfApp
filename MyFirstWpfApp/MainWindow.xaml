@@ -4,10 +4,14 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:MyFirstWpfApp"
+        xmlns:DotNet="Common.Utilities"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Rectangle Fill="Blue" HorizontalAlignment="Left" Height="245" Margin="221,80,0,0" Stroke="Black" VerticalAlignment="Top" Width="342"/>
+        <Rectangle x:Name="Rectangle1" Fill="Black"  HorizontalAlignment="Left" Height="138" Margin="196,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="182"/>
+        <Button x:Name="whiteButton" Content="white" HorizontalAlignment="Left" Margin="619,241,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
+        <Rectangle Fill="{Binding ElementName=Rectangle1,Path=Fill,Mode=Default}" HorizontalAlignment="Left" Height="100" Margin="48,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
+        <Button x:Name="blackButton" Content="black" HorizontalAlignment="Left" Margin="619,276,0,0" VerticalAlignment="Top" Width="75" Click="BlackButton_Click"/>
 
     </Grid>
 </Window>
