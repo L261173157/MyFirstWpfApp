@@ -3,15 +3,31 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:MyFirstWpfApp"
         xmlns:DotNet="Common.Utilities"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="{}" Height="450" Width="800">
+    <Window.Resources>
+        <sys:String x:Key="myString">
+            hello wpf resources
+        </sys:String>
+    </Window.Resources>
+
+    <!--这是一个测试的wpf程序-->
     <Grid>
-        <Rectangle x:Name="Rectangle1" Fill="Black"  HorizontalAlignment="Left" Height="138" Margin="196,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="182"/>
+        <Rectangle x:Name="Rectangle1" Fill="Black"  HorizontalAlignment="Left" Height="100" Margin="196,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="71" RenderTransformOrigin="0.5,0.5"/>
         <Button x:Name="whiteButton" Content="white" HorizontalAlignment="Left" Margin="619,241,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Rectangle Fill="{Binding ElementName=Rectangle1,Path=Fill,Mode=Default}" HorizontalAlignment="Left" Height="100" Margin="48,44,0,0" Stroke="Black" VerticalAlignment="Top" Width="100"/>
         <Button x:Name="blackButton" Content="black" HorizontalAlignment="Left" Margin="619,276,0,0" VerticalAlignment="Top" Width="75" Click="BlackButton_Click"/>
+        <TextBlock HorizontalAlignment="Left" Margin="48,188,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Height="18" Width="150"><Run Text="hello wpf resources"/></TextBlock>
+        <ListBox x:Name="ListBoxEmployee" HorizontalAlignment="Left" Height="100" Margin="324,44,0,0" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="324,172,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1"/>
+        <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="22" Margin="48,239,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Add Name" HorizontalAlignment="Left" Margin="48,282,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_2"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="48,321,0,0" TextWrapping="Wrap" Text="{Binding Value,ElementName=Slider1,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
+        <Slider x:Name="Slider1" HorizontalAlignment="Left" Margin="48,357,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.167,-0.288" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="196,238,0,0" TextWrapping="Wrap" Text="{Binding Text.Length, ElementName=textBoxName,Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
 
     </Grid>
 </Window>
