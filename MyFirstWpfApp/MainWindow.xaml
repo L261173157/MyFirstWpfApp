@@ -34,7 +34,6 @@
                 <local:employee Age="20" Id="10" Name="ok"/>
             </StackPanel.DataContext>
             <Grid Height="100">
-                <StackPanel HorizontalAlignment="Left" Height="100" Margin="82,55,0,-55" VerticalAlignment="Top" Width="100"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding Age}" VerticalAlignment="Top" Width="120"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Width="120"/>
                 <TextBox HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
