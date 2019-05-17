@@ -22,7 +22,7 @@ namespace MyFirstWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
-        int Age;
+        public int Age;
         Student student;
         public static string myString = "abc";
         List<employee> employees = new List<employee>()
@@ -101,5 +101,13 @@ namespace MyFirstWpfApp
         public event PropertyChangedEventHandler PropertyChanged;
 
     }
+    //class Teacher:INotifyPropertyChanged
+    //{
+    //    string name;
+
+    //    public string Name { get => name; set => name = value; }
+
+    //    public event PropertyChangedEventHandler PropertyChanged;
+    //}
     
 }

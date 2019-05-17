@@ -28,6 +28,18 @@
         <TextBox HorizontalAlignment="Left" Height="23" Margin="48,321,0,0" TextWrapping="Wrap" Text="{Binding Value,ElementName=Slider1,UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top" Width="120"/>
         <Slider x:Name="Slider1" HorizontalAlignment="Left" Margin="48,357,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.167,-0.288" Width="120"/>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="196,238,0,0" TextWrapping="Wrap" Text="{Binding Text.Length, ElementName=textBoxName,Mode=OneWay}" VerticalAlignment="Top" Width="120"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="196,281,0,0" TextWrapping="Wrap" Text="{}" VerticalAlignment="Top" Width="120"/>
+        <StackPanel HorizontalAlignment="Left" Height="100" Margin="501,44,0,0" VerticalAlignment="Top" Width="193">
+            <StackPanel.DataContext>
+                <local:employee Age="20" Id="10" Name="ok"/>
+            </StackPanel.DataContext>
+            <Grid Height="100">
+                <StackPanel HorizontalAlignment="Left" Height="100" Margin="82,55,0,-55" VerticalAlignment="Top" Width="100"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,10,0,0" TextWrapping="Wrap" Text="{Binding Age}" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,38,0,0" TextWrapping="Wrap" Text="{Binding Id}" VerticalAlignment="Top" Width="120"/>
+                <TextBox HorizontalAlignment="Left" Height="23" Margin="10,66,0,0" TextWrapping="Wrap" Text="{Binding Name}" VerticalAlignment="Top" Width="120"/>
+            </Grid>
+        </StackPanel>
 
     </Grid>
 </Window>
