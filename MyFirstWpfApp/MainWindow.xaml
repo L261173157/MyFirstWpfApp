@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:MyFirstWpfApp"
-        xmlns:DotNet="Common.Utilities"
+        
         mc:Ignorable="d"
         Title="{}" Height="450" Width="800">
     <Window.Resources>
