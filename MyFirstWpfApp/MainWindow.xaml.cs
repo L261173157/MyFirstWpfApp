@@ -12,7 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Common.Utility;
+
 using System.ComponentModel;
 using GRR;
 
@@ -23,6 +23,8 @@ namespace MyFirstWpfApp
     /// </summary>
     public partial class MainWindow : Window
     {
+        string mystring1 = "abc";
+        
         public int Age;
         Student student;
         GRR.GRR gRR = new GRR.GRR();
@@ -48,6 +50,7 @@ namespace MyFirstWpfApp
             //binding.Path = new PropertyPath("Name");
             //BindingOperations.SetBinding(this.textBoxName, TextBox.TextProperty, binding);
             this.textBoxName.SetBinding(TextBox.TextProperty, new Binding("Name") { Source = student = new Student() });
+            this.textBox1.SetBinding(TextBox.TextProperty,new Binding("."){Source=mystring1 });
 
         }
         SolidColorBrush mySolidColorBrush = new SolidColorBrush();
@@ -59,6 +62,7 @@ namespace MyFirstWpfApp
             mySolidColorBrush.Color = Color.FromArgb(0, 0, 0, 0);
             Rectangle1.Fill = mySolidColorBrush;
             myString = "white";
+            mystring1 = "edf";
 
         }
 
